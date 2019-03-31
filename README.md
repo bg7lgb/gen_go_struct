@@ -2,7 +2,7 @@
 
 generate golang struct entity from mysql database.
 
-# usage
+## usage
 
 ```shell
 python gen_go_struct.py [-h] [-u USER] [-s SERVER] [-p PORT] -d DATABASE
