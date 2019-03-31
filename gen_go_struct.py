@@ -40,8 +40,7 @@ def main():
     # print('port: {0}'.format(port))
     # print('database: {0}'.format(database))
 
-#    db_passwd = input('db passwd:')
-    db_passwd = 'db2bg7lgb'
+    db_passwd = input('db passwd:')
 
     conn = pymysql.connect(host=server, user=user, port=port, 
     passwd=db_passwd,db='information_schema',charset='utf8')
@@ -113,7 +112,7 @@ def gen_struct(table_name, rows, table_comment, to_json):
                 null_able = False
 
             # set data type
-            if rows[i][1] == 'integer':
+            if rows[i][1] in ('int', 'integer'):
                 if null_able:
                     data_type = 'sql.NullInt64'
                 else:
